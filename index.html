@@ -1,10 +1,15 @@
-import java.awt.Desktop;
-import java.net.URI;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading Survey...</title>
+</head>
+<body>
+    <script>
+        const controlLink = "https://docs.google.com/forms/d/e/1FAIpQLSec1-S_qxJDxU91E_0ryFgRArbhe0wGpfSh86WrqECzjV8aOw/viewform?usp=preview";
+        const treatmentLink = "https://docs.google.com/forms/d/e/1FAIpQLSeUmoXqhWjyqiyrWaQuiim96gu0FK8vv9lUQOlUYgBb3oWb9Q/viewform?usp=preview";
 
-String controlLink = "https://docs.google.com/forms/d/e/1FAIpQLSec1-S_qxJDxU91E_0ryFgRArbhe0wGpfSh86WrqECzjV8aOw/viewform?usp=preview";
-String treatmentLink = "https://docs.google.com/forms/d/e/1FAIpQLSeUmoXqhWjyqiyrWaQuiim96gu0FK8vv9lUQOlUYgBb3oWb9Q/viewform?usp=preview";
-
-String redirectTo = Math.random() < 0.5 ? controlLink : treatmentLink;
-
-System.out.println("Opening: " + redirectTo);
-Desktop.getDesktop().browse(new URI(redirectTo))
+        const redirectTo = Math.random() < 0.5 ? controlLink : treatmentLink;
+        window.location.href = redirectTo;
+    </script>
+</body>
+</html>
